@@ -1,0 +1,49 @@
+Unity Project Setup Guide for Conquest of the Seven Kingdoms
+
+1. Create a new Unity 2D project (Unity 2022.3 LTS recommended)
+
+2. Import the scripts into Assets/Scripts/ folder
+
+3. Create the following folder structure:
+   - Assets/Scripts/
+   - Assets/ScriptableObjects/
+   - Assets/Prefabs/
+   - Assets/Scenes/
+   - Assets/Art/
+
+4. Set up the main scene:
+   - Add GameManager GameObject with GameManager script
+   - Add CameraController script to Main Camera
+   - Add MapLoader GameObject with MapLoader script
+   - Add AIController script to GameManager
+
+5. Create TerritoryData ScriptableObject:
+   - Right-click in Project window → Create → Conquest → Territory Data
+   - Use "Create Sample Map" context menu option
+   - Assign to MapLoader component
+
+6. Set up prefabs:
+   - Create TerritoryPrefab with Territory script
+   - Create ArmyPrefab with ArmyMovement script
+   - Assign to MapLoader component
+
+7. Configure UI:
+   - Create Canvas with UI elements
+   - Connect UI elements to GameManager
+
+8. Build Settings:
+   - Set MainGame.unity as the main scene
+   - Configure for your target platform
+
+9. Run the game:
+   - Press Play in Unity
+   - Click on blue territories (player) then connected territories to send armies
+   - Watch AI factions (red/green) make strategic decisions
+
+Controls:
+- Left Click: Select territory, send army
+- Right Click + Drag: Pan camera
+- Mouse Wheel: Zoom
+- WASD: Pan camera
+- +/-: Zoom
+- Space: Reset camera view
